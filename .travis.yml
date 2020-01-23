@@ -10,11 +10,15 @@ script:
 
 deploy:
     provider: elasticbeanstalk
+    access_key_id:
+        secure: "d9td5mgwve0GBwFkyr2BcNQVj/R27Rx9/VBBRnt8pdcWVvzeagVKhpOHVbdPnLroO5XZ3ScyrDLcobBd/VNFstmDhRJSfVAbnVf+zgWJ/XJcdAGfNcB2TEe3UqyjUbaa50SCXc8Z2RGNgRgH1/9eOg3YdrHPEDKZDJLVEiN0/4xCvIoBe4ZmWSDkO/wnxspabESfzsj/IRZprgy/+61223uuCmIMJBHKmv9QXKlknTILEl0MG7dpX/v5CHldg+XRZ7jU9nxBYsrXG+TBRdF85gfxi3JUvIcp6Kvj0FNDefFgK8V8GBVfqbK3/4pPsnAJfoa9WkVF693Onp3Qw4gqIF/6HSfDIvE2J/SrpfkZnDRPvL4C4Hweggjgxru3elYRYAFHgTDn1IBk/907kKuH8XO3lCRWRtbveSWoUZIQc0A0Qf6qxT3157b++ZW75nLloOPttYS+3V30+dWKZqV/fzHur+k/rKC1NqdD67YS9py3TglVr8xkW6ENqwxgWPFD9vHg2DozTkKrg1SlTsmPbME2TpKEO6ZJMkA6nYvEnD/ZdvVwgbhNi5ZnFeyhicoIzEqeMfsLnK7PZDtwYeWanlwW9b37Kt+Oom8wzg/uQLZ1+XHcbPUCdqgrckAslhJAxOBNEKWtYUWIyiWMvjPPz66crJiKdRAxwAzl4bYXhV4="
+    secret_access_key:
+        secure: "LRRwHnTCZ4dggX7MGMCH0zWEXQhVZHKaN3H3b2BwarFl65ctnPeg8eWupk5HhhVitB1LJrUcryQ+/TNb1uZGK/WW1HmYJFKHM8pI80BVQnTmgZ6NxqvwxYAGp0IRTpMQ/aAgk3IIowGNP70F2O5T7tJ1K94RIyQcScfE2YGW5SNa4q18TilmkvH/lgRny3UDURgNVlTKy+GRWEEpLr57G/9FVpIm+VdGbSaCktv0TZY4oBQvQkglL9mwj0YfDi1IuiQDm3DOnuT7ndJMB02ShAH2BH/oAII9UJNmrQfr2yfFjy9exwwB9CNP0LizWyRyd5J8bHjTqq7uuV9fJFe/yiobr+AdOwivCdDLZ/JmGL/tLQKxfMw4Wm4ALNdgmpRSwKuv0vJh5PQJfUt2OhdTFdC1O7+uye8IY2uEQfbUz5/4tVA4aHo2Xgd9vTnkTYcknVMO2/DbGi7TKwk+NXyggW2CfYQA3Fg/l+2UmpTlbH13Jgn9CBalPnHpwul6l4+8pykbds4KsXzGttlbsn7QHe9aopqfmCrutdBqZLcnvesn9y09X1xSfegjyHzvpOGMn+0ekX2f8WAsy6+to45R2cMrukfA57Mxl+86oWhfQVT0mlOoomCS9IieYT8LGT+iUK/+kuBOOfgexaHtTGaE/mTcaT53nRobmLm0N6KWL/I="
     region: "us-east-2"
     app: "docker-react"
     env: "DockerReact-env"
-    bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-2-000652246951"
+    bucket_name: "elasticbeanstalk-us-east-2-000652246951"
     bucket_path: "docker-react"
     on:
         branch: master
-    edge: true
+    # edge: true
