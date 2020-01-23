@@ -7,3 +7,14 @@ before_install:
 
 script:
     - docker run -e CI=true juozasa/docker-react npm run test -- --coverage
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "docker-react"
+    env: "DockerReact-env"
+    bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-2-000652246951"
+    bucket_path: "docker-react"
+    on:
+        branch: master
+    edge: true
